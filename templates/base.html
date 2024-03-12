@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %} - 伽利略</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href="{{ url_for('static',filename='css/bootstrap.min.css') }}" rel="stylesheet" >
+    <link href="{{ url_for('static',filename='css/dashboard.css') }}" rel="stylesheet">
+  </head>
+
+ 
+
+  <body>
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+    {% block header %}
+    <nav class="navbar navbar-expand  navbar-dark bg-dark">
+      <div class="container justify-content-end">
+        <a class="navbar-brand" href="#">部门运维管理平台</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="d-flex collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav font-size-md">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">724值班表</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linuxcool.com/">Linux命令速查</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">常用连接</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">其他</a>
+            </li>
+          </ul>
+
+          <form class="d-flex justify-content-end" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+
+        </div>
+      </div>
+    </nav>
+    {% endblock %}
+    </header>
+
+
+
+
+
+      <div class="row">
+  
+        {% include '_sidebar.html' %}
+  
+  
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+          
+            {% block content%} hello ll{% endblock %}
+
+            
+        </main>
+        
+        {% include '_footer.html' %}
+
+  
+      </div>
+      
+
+
+   
+
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+  </body>
+</html>
+

@@ -1,0 +1,54 @@
+<style>
+  .font-size-lg {  
+  font-size: 1.25rem; /* 或其他你希望的大小 */  
+}
+</style>
+
+<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse mt-3">
+  <div class="position-sticky pt-3 sidebar-sticky">
+    <ul class="nav flex-column font-size-md">
+      <li class="nav-item ">
+        <a class="nav-link active h1-responsive" aria-current="page" href="{{ url_for('oper.homepage') }}">
+          <span data-feather="home" class="align-text-bottom"></span>
+          <img src="{{ url_for('static', filename='house-fill.svg') }}" alt="Bootstrap" width="16" height="16">
+          主页
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('oper.deploy') }}">
+          <span data-feather="file" class="align-text-bottom"></span>
+          <img src="{{ url_for('static', filename='flag.svg') }}" alt="Bootstrap" width="16" height="16">
+          批次投产
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <span data-feather="shopping-cart" class="align-text-bottom"></span>
+          <img src="{{ url_for('static', filename='server.svg') }}" alt="Bootstrap" width="16" height="16">
+          基础环境窗口
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('oper.duty') }}">
+          <span data-feather="users" class="align-text-bottom"></span>
+          <img src="{{ url_for('static', filename='person-check.svg') }}" alt="Bootstrap" width="16" height="16">
+          值班
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('oper.tools_repo') }}">
+          <span data-feather="bar-chart-2" class="align-text-bottom"></span>
+          <img src="{{ url_for('static', filename='cloud-download.svg') }}" alt="Bootstrap" width="16" height="16">
+          工具下载
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <span data-feather="layers" class="align-text-bottom"></span>
+          <img src="{{ url_for('static', filename='question-diamond.svg') }}" alt="Bootstrap" width="16" height="16">
+          知识库
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
